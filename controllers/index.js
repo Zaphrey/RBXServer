@@ -44,11 +44,11 @@ module.exports.addCommand = async (req, res) => {
 }
 
 module.exports.getCommand = (req, res) => {
-    const cmdIndex = req.params.index
+    const cmdIndex = req.params.index - 1 || 0
 
-    if (commandQueue[cmdIndex - 1]) {
-        res.send(commandQueue[cmdIndex - 1])
-        console.log(commandQueue[cmdIndex - 1])
+    if (commandQueue[cmdIndex]) {
+        res.send(commandQueue[cmdIndex])
+        console.log(commandQueue[cmdIndex])
     }
     else {
         res.status(400).send("invalid index")
