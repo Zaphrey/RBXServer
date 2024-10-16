@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --border-radius: 8px;
+    --border-style: 2px solid black;
+    --border-style-half: 1px solid black;
+    --border-style-double: 2px solid black;
+}
+
+body {
+    margin: auto;
+    font-family: "Roboto";
+    max-width: 1024px;
+}
+
+main {
+    display: block;
+    position: relative;
+}
+
+label {
+    display: block;
+    padding-top: 1em;
+    margin: 0.5em;
+}
+
+.section {
+    border: var(--border-style);
+    border-radius: var(--border-radius);
+    padding: 0.5em;
+    margin: 0.5em;
+}
+
+input {
+    border: var(--border-style);
+    border-radius: var(--border-radius);
+    padding: 0.5em;
+    display: block;
+}
+
+input:hover {
+    background-color: rgb(223, 223, 223);
+}
+
+input:invalid {
+    background-color: rgb(255, 216, 216);
+}
+
+.button {
+    margin: 0.5em;
+    border: var(--border-style);
+    border-radius: var(--border-radius);
+    padding: 0.5em;
+    background-color: white;
+    box-shadow: 4px 4px black;
+}
+
+.button:hover {
+    position: relative;
+    background-color: rgb(223, 223, 223);
+    box-shadow: 3px 3px black;;
+    left: 1px;
+    top: 1px;
+}
+
+.button:hover:active {
+    box-shadow: none;
+    left: 4px;
+    top: 4px;
+}
+
+table {
+    border: var(--border-style);
+    border-radius: var(--border-radius);
+    margin: 0.5em;
+    border-spacing: 0;
+    width: 100%;
+}
+
+th, td {
+    border: var(--border-style-half);
+    padding: 0.5em;
+    margin: 0.5em;
+    text-align: left;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: rgb(223, 223, 223);
+}
+
+thead th {
+    border: var(--border-style-half);
+    border-top: none;
+}
+
+thead th:first-child {
+    width: 10ch;
+}
+
+thead th:first-child {
+    border-left: none;
+}
+
+thead th:last-child {
+    border-right: none;
+}
+
+tbody tr:first-child th {
+    border-top: var(--border-style-double);
+}
+
+tbody tr:last-child th {
+    border-bottom: none;
+}
+
+tbody th:first-child {
+    border-left: none;
+}
+
+tbody th:last-child {
+    border-right: none;
+}
+
+ul {
+    border: var(--border-style);
+    border-radius: var(--border-radius);
+    text-align: center;
+    margin: 0.5em;
+    padding: 0;
+}
+
+li {
+    text-align: left;
+    border-top: var(--border-style-half);
+    border-bottom: var(--border-style-half);
+    list-style-type: none;
+    padding: 0.5em;
+    display: grid;
+    grid-template-columns: 1fr 5fr ;
+}
+
+li:first-child {
+    border-top: none;
+}
+
+li:last-child {
+    border-bottom: none;
+}
