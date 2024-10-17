@@ -39,7 +39,7 @@ module.exports.addCommand = async (req, res) => {
     if (body.command && body.details) {
         commandQueue.push(`${body.command}=${body.details}`)
     }
-
+    console.log(body)
     res.send(commandQueue[commandQueue.length - 1])
 }
 

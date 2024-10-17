@@ -19,7 +19,7 @@ const addCommand = async () => {
     })
 
     command.value = ""
-    command.data = ""
+    commandData.value = ""
 }
 
 const loadCommands = async () => {
