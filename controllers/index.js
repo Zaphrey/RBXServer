@@ -35,11 +35,11 @@ module.exports.sendMessage = async (message) => {
 
 module.exports.addCommand = async (req, res) => {
     const body = req.body
-
+    console.log(body)
     if (body.command && body.details) {
         commandQueue.push(`${body.command}=${body.details}`)
     }
-    console.log(body)
+    
     res.send(commandQueue[commandQueue.length - 1])
 }
 
